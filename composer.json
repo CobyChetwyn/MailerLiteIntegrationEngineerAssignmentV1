@@ -11,9 +11,13 @@
     "php": "^8.0.2",
     "fruitcake/laravel-cors": "^2.0.5",
     "guzzlehttp/guzzle": "^7.2",
+    "guzzlehttp/psr7": "^2.5",
     "laravel/framework": "^9.0",
     "laravel/sanctum": "^2.14",
-    "laravel/tinker": "^2.7"
+    "laravel/tinker": "^2.7",
+    "mailerlite/mailerlite-php": "^1.0",
+    "php-http/curl-client": "^2.2",
+    "php-http/message": "^1.14"
   },
   "require-dev": {
     "fakerphp/faker": "^1.9.1",
@@ -61,7 +65,10 @@
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true
