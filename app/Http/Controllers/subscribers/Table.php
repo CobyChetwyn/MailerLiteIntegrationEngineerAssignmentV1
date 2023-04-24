@@ -41,6 +41,10 @@ class Table extends Controller
     $data = [];
 
     if (empty($request->input('search.value'))) {
+
+      $limit = $request->input('length');
+      $start = $request->input('start');
+
       $counter = count($response['body']['data']);
       foreach ($response['body']['data'] as $info){
         $nestedData['id'] = $info['id'];
@@ -51,6 +55,9 @@ class Table extends Controller
 
         $data[] = $nestedData;
       }
+
+      $data = array_slice($data, $start);
+
     } else {
       $limit = $request->input('length');
       $start = $request->input('start');
@@ -71,6 +78,8 @@ class Table extends Controller
           $counter ++;
         }
       }
+
+      $data = array_slice($data, $start);
     }
 
     if ($data) {
