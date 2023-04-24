@@ -63,8 +63,9 @@ $(function () {
           responsivePriority: 4,
           render: function (data, type, full, meta) {
             var $name = full['email'];
+            var $id = full['id'];
 
-            return '<span class="user-email">' + $name + '</span>';
+            return '<span class="user-email"><a href="javascript:void(0)" class="edit-record" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser" data-id="' + $id + '">' + $name + '</a></span>';
           }
         },
         {

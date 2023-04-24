@@ -56,7 +56,7 @@ class Table extends Controller
         $data[] = $nestedData;
       }
 
-      $data = array_slice($data, $start);
+      $data = array_slice($data, $start, $limit);
 
     } else {
       $limit = $request->input('length');
@@ -79,7 +79,7 @@ class Table extends Controller
         }
       }
 
-      $data = array_slice($data, $start);
+      $data = array_slice($data, $start, $limit);
     }
 
     if ($data) {
