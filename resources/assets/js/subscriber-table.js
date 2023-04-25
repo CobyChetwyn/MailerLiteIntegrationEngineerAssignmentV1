@@ -222,8 +222,8 @@ $(function () {
         // sweetalert
         Swal.fire({
           icon: 'success',
-          title: `Successfully Added!`,
-          text: `Subscriber Added Successfully.`,
+          title: `Successfully ${status}!`,
+          text: `Subscriber ${status} Successfully.`,
           customClass: {
             confirmButton: 'btn btn-success'
           }

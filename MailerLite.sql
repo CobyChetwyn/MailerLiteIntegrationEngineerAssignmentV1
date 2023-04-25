@@ -22,6 +22,8 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+CREATE DATABASE MailerLite;
+USE MailerLite;
 
 --
 -- Table structure for table `config`
